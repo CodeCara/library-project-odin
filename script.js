@@ -1,4 +1,12 @@
 const myLibrary = ['Book1', 'Book2'];
+let newBookButton = document.getElementById('newBookButton');
+let form = document.querySelector('form');
+
+
+function revealForm () {
+    form.style.display = 'flex';};
+
+newBookButton.addEventListener('click', revealForm);
 
 function myBook () {
 
@@ -20,4 +28,3 @@ console.table(myLibrary[i]);
 
 }
 
-displayBook();

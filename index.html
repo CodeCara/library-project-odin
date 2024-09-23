@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button type="submit">NEW BOOK</button>
+    <button id = "newBookButton">NEW BOOK</button>
 
     <form action="post">
 <label for="author">Author</label>
@@ -16,12 +16,13 @@
 <input type="text" name="title" id="title">
 <label for="numberOfPages">No. of Pages</label>
 <input type="number" name="numberOfPages" id="numberOfPages">
-<label for="bla">Read?</label>
+<label for="ifRead">Read?</label>
 <select name="ifRead" id="ifRead">
     <option value="Choose">Choose option</option>
     <option value="Yes">Yes</option>
     <option value="No">No</option>
 </select>
+<button type="submit" class="submitButton">Submit</button>
 
 
 
