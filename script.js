@@ -10,9 +10,18 @@ function revealForm () {
 
 newBookButton.addEventListener('click', revealForm);
 
-// function myBook () {
+
+//Constructor function WORKS
+// function Book (author, title, noOfPages, isRead) {
+// this.author = author;
+// this.title = title;
+// this.noOfPages = noOfPages;
+// this.isRead = isRead;
 
 // }
+
+// const Book1 = new Book ('sdf', 'asdf', 6, true);
+// console.log(Book1);
 
 // function addToLibrary ()
 // {

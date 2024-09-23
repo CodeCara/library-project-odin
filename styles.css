@@ -1,11 +1,27 @@
 form {
-flex-direction: column;
-width: 15rem;
+/* flex-direction: column; */
+
+margin-left: 15rem;
 margin-top: 2rem;
-display: none;} 
+display: none;
+background-color: aqua;
+border: 4px sold black;
+} 
 
 input, select {margin-bottom: 1.5rem;}
 
+.library-container
+{display: grid;
+grid-template-columns: repeat(5, 1fr) ;
+gap: 8rem;
+margin-top: 8rem;
+margin-left: 15rem;
+background-color: red;
+
+border: 1px sold black;}
 
 /* button {margin: auto;} */
-
+.flex-container
+{
+    /* display: flex;}  */
+}
