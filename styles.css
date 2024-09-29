@@ -12,11 +12,11 @@ input, select {margin-bottom: 1.5rem;}
 
 .library-container
 {display: grid;
-grid-template-columns: repeat(5, 1fr) ;
+grid-template-columns: repeat(6, 1fr) ;
 gap: 8rem;
 margin-top: 8rem;
 margin-left: 15rem;
-background-color: red;
+/* background-color: red; */
 
 border: 1px sold black;}
 

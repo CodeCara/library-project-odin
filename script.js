@@ -1,71 +1,112 @@
-const myLibrary = ['Book1', 'Book2'];
+const myLibrary = [];
 const newBookButton = document.getElementById('newBookButton');
 const form = document.querySelector('form');
+//classnames not presented correctly!
 const addToLibraryButton = document.querySelector('.addToLibraryButton');
+let libraryContainer = document.querySelector('.library-container');
 
 
 
 
-function revealForm () {
-    form.style.display = 'flex';};
+// function revealForm () {
+//     form.style.display = 'flex';};
 
-newBookButton.addEventListener('click', revealForm);
+// newBookButton.addEventListener('click', revealForm);
 
-function captureInputs (){
-    let author = document.getElementById('author').value;
+function addToLibrary (){
+ 
+let author = document.getElementById('author').value;
+     
+let title = document.getElementById('title').value;
+let numberOfPages = document.getElementById('numberOfPages').value;
+let ifRead =   document.getElementById('ifRead').value;
+const newBook = new Book (author, title, numberOfPages, ifRead);
+    myLibrary.push(newBook);
+//    if (cardDiv1){ remove.cardDiv1();}
+    // remove.cardDiv2();
+    // remove.cardDiv3();
+    // remove.cardDiv4();
+    // remove.deleteButton();
+    // remove.changeReadStatus();
 
-    let title = document.getElementById('title').value;
-    let numberOfPages = document.getElementById('numberOfPages').value;
-    let ifRead =   document.getElementById('ifRead').value;
-    const Book1 = new Book (author, title, numberOfPages, ifRead); 
-    console.log(Book1);
+    displayBooks();
 
-
-
-
-
-
-}
+  
+ }
 
 
 
 //Constructor function WORKS
-function Book (author, title, noOfPages, isRead) {
+function Book (author, title, numberOfPages, ifRead) {
 this.author = author;
 this.title = title;
-this.noOfPages = noOfPages;
-this.isRead = isRead;
+this.numberOfPages = numberOfPages;
+this.ifRead = ifRead;
 
  }
 
-// const Book1 = new Book ('sdf', 'asdf', 6, true);
-// console.log(Book1);
 
-// function addToLibrary ()
-// {
-
-// }
 
 addToLibraryButton.addEventListener('click', preventSubmit);
 function preventSubmit (event)
 {event.preventDefault();}
 
-addToLibraryButton.addEventListener('click', captureInputs);
+addToLibraryButton.addEventListener('click', addToLibrary);
 
 
+
+
+function displayBooks (newBook) {
+
+    libraryContainer.innerHTML=" ";
+
+    for (let i=0; i<myLibrary.length; i++)
+   
+        // {let bookDisplay =  myLibrary[i];
+          { 
+            
+            let cardDiv1 = document.createElement('div');
+            let cardDiv2 = document.createElement('div');
+            let cardDiv3 = document.createElement('div');
+            let cardDiv4 = document.createElement('div');
+            let deleteButton = document.createElement('button');
+            let changeReadStatus = document.createElement('button');
+
+            cardDiv1.innerText=myLibrary[i].author;
+            cardDiv2.innerText=myLibrary[i].title;
+            cardDiv3.innerText=myLibrary[i].numberOfPages;
+            cardDiv4.innerText=myLibrary[i].ifRead;
+
+
+
+           
+            // cardDiv1.innerText=newBook.author;
+            // cardDiv2.innerText=newBook.title;
+            // cardDiv3.innerText=newBook.numberOfPages;
+            // cardDiv4.innerText=newBook.ifRead;
+
+            
+            // cardDiv3.innerText=newBook.numberOfPages.toString();
+            changeReadStatus.innerText="Read";
+            deleteButton.innerText="delete button";
+            document.querySelector('.library-container').appendChild(cardDiv1);
+            document.querySelector('.library-container').appendChild(cardDiv2);
+            document.querySelector('.library-container').appendChild(cardDiv3);
+            document.querySelector('.library-container').appendChild(cardDiv4);
+            document.querySelector('.library-container').appendChild(changeReadStatus);
+            document.querySelector('.library-container').appendChild(deleteButton);
+           
+
+
+
+
+           
+
+        }
 //                                                          
 
 
+    }
 
 
-
-
-
-function displayBook () {
-for (let i=0; i<myLibrary.length; i++)
-console.table(myLibrary[i]);
-
-
-}
-
-
+            // deleteButton.addEventListener('click', myLibrary.splice(1, [i]));
