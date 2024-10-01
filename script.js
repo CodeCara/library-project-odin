@@ -19,8 +19,8 @@ let author = document.getElementById('author').value;
      
 let title = document.getElementById('title').value;
 let numberOfPages = document.getElementById('numberOfPages').value;
-let ifRead =   document.getElementById('ifRead').value;
-const newBook = new Book (author, title, numberOfPages, ifRead);
+
+const newBook = new Book (author, title, numberOfPages);
     myLibrary.push(newBook);
 //    if (cardDiv1){ remove.cardDiv1();}
     // remove.cardDiv2();
@@ -41,7 +41,7 @@ function Book (author, title, numberOfPages, ifRead) {
 this.author = author;
 this.title = title;
 this.numberOfPages = numberOfPages;
-this.ifRead = ifRead;
+
 
  }
 
@@ -70,7 +70,7 @@ function displayBooks (newBook) {
             let cardDiv1 = document.createElement('div');
             let cardDiv2 = document.createElement('div');
             let cardDiv3 = document.createElement('div');
-            let cardDiv4 = document.createElement('div');
+          
             let deleteButton = document.createElement('button');
             let changeReadStatus = document.createElement('button');
 
@@ -80,7 +80,7 @@ function displayBooks (newBook) {
             cardDiv1.innerText=myLibrary[i].author;
             cardDiv2.innerText=myLibrary[i].title;
             cardDiv3.innerText=myLibrary[i].numberOfPages;
-            cardDiv4.innerText=myLibrary[i].ifRead;
+            
 
             //Data attribute for delete button functionality
             let indexNumber = i;
@@ -107,7 +107,7 @@ function displayBooks (newBook) {
             document.querySelector('.library-container').appendChild(cardDiv1);
             document.querySelector('.library-container').appendChild(cardDiv2);
             document.querySelector('.library-container').appendChild(cardDiv3);
-            document.querySelector('.library-container').appendChild(cardDiv4);
+            // document.querySelector('.library-container').appendChild(cardDiv4);
             document.querySelector('.library-container').appendChild(changeReadStatus);
             document.querySelector('.library-container').appendChild(deleteButton);
            
