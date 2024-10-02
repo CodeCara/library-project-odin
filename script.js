@@ -8,10 +8,10 @@ let libraryContainer = document.querySelector('.library-container');
 
 
 
-// function revealForm () {
-//     form.style.display = 'flex';};
+function revealForm () {
+    form.style.display = 'flex'};
 
-// newBookButton.addEventListener('click', revealForm);
+newBookButton.addEventListener('click', revealForm);
 
 function addToLibrary (){
  
