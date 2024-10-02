@@ -1,7 +1,17 @@
+
+
+:root
+
+{--body-color:#455d7a;
+--lib-main-color:  #233142;
+--highlight-color: #f95959; ;
+--text-color:#e3e3e3;
+
+}
+
 form {
 /* flex-direction: column; */
 
-margin-left: 15rem;
 margin-top: 2rem;
 display: none;
 background-color: aqua;
@@ -12,10 +22,11 @@ input, select {margin-bottom: 1.5rem;}
 
 .library-container
 {display: grid;
+    ;
 grid-template-columns: repeat(5, 1fr) ;
-gap: 8rem;
+gap: 2rem;
 margin-top: 8rem;
-margin-left: 15rem;
+
 /* background-color: red; */
 
 border: 1px sold black;}
@@ -23,5 +34,17 @@ border: 1px sold black;}
 /* button {margin: auto;} */
 .flex-container
 {
-    /* display: flex;}  */
+    justify-items: center;
+    background-color: red;
 }
+
+.flex-container p
+{
+    max-width: fit-content;
+    margin-left: auto;
+margin-right: auto;
+font-size: 3rem;}
+
+.p-container
+
+{background-color: blue;}

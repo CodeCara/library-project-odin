@@ -9,7 +9,7 @@ let libraryContainer = document.querySelector('.library-container');
 
 
 function revealForm () {
-    form.style.display = 'flex'};
+    form.style.display = 'block'};
 
 newBookButton.addEventListener('click', revealForm);
 
@@ -19,8 +19,10 @@ let author = document.getElementById('author').value;
      
 let title = document.getElementById('title').value;
 let numberOfPages = document.getElementById('numberOfPages').value;
+let readStatus =  document.getElementById('readStatus').value;
 
-const newBook = new Book (author, title, numberOfPages);
+
+const newBook = new Book (author, title, numberOfPages, readStatus);
     myLibrary.push(newBook);
 //    if (cardDiv1){ remove.cardDiv1();}
     // remove.cardDiv2();
@@ -37,11 +39,11 @@ const newBook = new Book (author, title, numberOfPages);
 
 
 //Constructor function WORKS
-function Book (author, title, numberOfPages, ifRead) {
+function Book (author, title, numberOfPages, readStatus) {
 this.author = author;
 this.title = title;
 this.numberOfPages = numberOfPages;
-
+this.readStatus = readStatus;
 
  }
 
@@ -83,10 +85,10 @@ function displayBooks (newBook) {
             
 
             //Data attribute for delete button functionality
-            let indexNumber = i;
+            // let indexNumber = i;
             
           
-            changeReadStatus.innerText="Read";
+            changeReadStatus.innerText=myLibrary[i].readStatus;
             deleteButton.innerText="delete button";
             document.querySelector('.library-container').appendChild(cardDiv1);
             document.querySelector('.library-container').appendChild(cardDiv2);
@@ -107,21 +109,35 @@ function deleteLibraryItem ()
  changeReadStatus.addEventListener('click', function () 
   
   {
-    console.log(changeReadStatus.innerText)
-    if (changeReadStatus.innerText==='Read')
-        {changeReadStatus.innerText='Unread'
-          console.log(changeReadStatus.innerText)
+    console.log(myLibrary[i].readStatus);
+    
+    if (
+      changeReadStatus.innerText==='Read')
+
+      
+      
+      
+{changeReadStatus.innerText='Unread'
+  myLibrary[i].readStatus = 'Unread'
+  console.log(myLibrary[i]);
+}
+
+   
         
           
-        }
+        
 
-   else {changeReadStatus.innerText='Read'}
+   else {changeReadStatus.innerText='Read'
+    myLibrary[i].readStatus='Read';
+    console.log(myLibrary[i]);
+
+   }
 
    }
   )
 
   
-console.log(changeReadStatus.innerText); 
+
 
  
 

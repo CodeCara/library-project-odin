@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="flex-container">
-    <div class="button-and-form-container">
+    <div class="main-container">
+       <div class="p-container"> <p>Library</p></div>
+    <!-- <div class="button-and-form-container"> -->
     <button id = "newBookButton">NEW BOOK</button>
 
     <form action="post">
@@ -18,11 +19,14 @@
 <input type="text" name="title" id="title">
 <label for="numberOfPages">No. of Pages</label>
 <input type="number" name="numberOfPages" id="numberOfPages">
-
-
+<label for "readStatus" >Read status</label>
+<select type="text" name="readStatus" id="readStatus">
+    <option value="Read">Read</option>
+    <option value="Unread">Unread</option>
+</select>
 <button type="submit" class="addToLibraryButton">Add to Library</button>
 </form>
-</div>
+<!-- </div> -->
 <div class="library-container">
   
   
