@@ -85,23 +85,7 @@ function displayBooks (newBook) {
             //Data attribute for delete button functionality
             let indexNumber = i;
             
-            // cardDiv1.setAttribute('data-number', 'indexNumber');
-            // cardDiv2.setAttribute('data-number', 'indexNumber');
-            // cardDiv3.setAttribute('data-number', 'indexNumber');
-            // cardDiv4.setAttribute('data-number', 'indexNumber');
-            // deleteButton.setAttribute('data-number', 'indexNumber');
-            // changeReadStatus.setAttribute('data-number', 'indexNumber');
-
-
-
-           
-            // cardDiv1.innerText=newBook.author;
-            // cardDiv2.innerText=newBook.title;
-            // cardDiv3.innerText=newBook.numberOfPages;
-            // cardDiv4.innerText=newBook.ifRead;
-
-            
-            // cardDiv3.innerText=newBook.numberOfPages.toString();
+          
             changeReadStatus.innerText="Read";
             deleteButton.innerText="delete button";
             document.querySelector('.library-container').appendChild(cardDiv1);
@@ -120,10 +104,33 @@ function deleteLibraryItem ()
     displayBooks();
  };
 
-
-           
-
+ changeReadStatus.addEventListener('click', function () 
+  
+  {
+    console.log(changeReadStatus.innerText)
+    if (changeReadStatus.innerText==='Read')
+        {changeReadStatus.innerText='Unread'
+          console.log(changeReadStatus.innerText)
         
+          
+        }
+
+   else {changeReadStatus.innerText='Read'}
+
+   }
+  )
+
+  
+console.log(changeReadStatus.innerText); 
+
+ 
+
+
+  }      
+
+     
+
+ 
 //      
 
 
@@ -131,5 +138,5 @@ function deleteLibraryItem ()
 
     }
 
-}
+  
             // deleteButton.addEventListener('click', myLibrary.splice(1, [i]));
