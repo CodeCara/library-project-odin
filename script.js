@@ -1,15 +1,16 @@
 const myLibrary = [];
-const newBookButton = document.getElementById('newBookButton');
+const newBookButton = document.querySelector('.new-book-button');
 const form = document.querySelector('form');
 //classnames not presented correctly!
-const addToLibraryButton = document.querySelector('.addToLibraryButton');
-let libraryContainer = document.querySelector('.library-container');
+const addToLibraryButton = document.querySelector('.add-to-library-button');
+const libraryContainer = document.querySelector('.library-container');
 
 
 
 
 function revealForm () {
-    form.style.display = 'block'};
+    form.style.display = 'flex';
+  form.style.flexDirection= 'column';}
 
 newBookButton.addEventListener('click', revealForm);
 
@@ -24,6 +25,7 @@ let readStatus =  document.getElementById('readStatus').value;
 
 const newBook = new Book (author, title, numberOfPages, readStatus);
     myLibrary.push(newBook);
+    // form.style.display='none';
 //    if (cardDiv1){ remove.cardDiv1();}
     // remove.cardDiv2();
     // remove.cardDiv3();
@@ -75,7 +77,7 @@ function displayBooks (newBook) {
           
             let deleteButton = document.createElement('button');
             let changeReadStatus = document.createElement('button');
-
+           
             
             
 
@@ -89,7 +91,8 @@ function displayBooks (newBook) {
             
           
             changeReadStatus.innerText=myLibrary[i].readStatus;
-            deleteButton.innerText="delete button";
+            changeReadStatus.style.backgroundColor='green';
+            deleteButton.innerText="Delete";
             document.querySelector('.library-container').appendChild(cardDiv1);
             document.querySelector('.library-container').appendChild(cardDiv2);
             document.querySelector('.library-container').appendChild(cardDiv3);
@@ -118,6 +121,7 @@ function deleteLibraryItem ()
       
       
 {changeReadStatus.innerText='Unread'
+changeReadStatus.style.backgroundColor='red';
   myLibrary[i].readStatus = 'Unread'
   console.log(myLibrary[i]);
 }
@@ -128,6 +132,8 @@ function deleteLibraryItem ()
         
 
    else {changeReadStatus.innerText='Read'
+   changeReadStatus.style.backgroundColor='green';
+
     myLibrary[i].readStatus='Read';
     console.log(myLibrary[i]);
 

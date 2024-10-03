@@ -7,35 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main-container">
-       <div class="p-container"> <p>Library</p></div>
-    <!-- <div class="button-and-form-container"> -->
-    <button id = "newBookButton">NEW BOOK</button>
-
+    <div class="form-plus-main-container">
     <form action="post">
+        <!-- <div class="author-title-container"> -->
 <label for="author">Author</label>
 <input type="text" name="author" id="author">
 <label for="title">Title</label>
 <input type="text" name="title" id="title">
+<!-- </div> -->
+<!-- <div class="pages-read-container"> -->
 <label for="numberOfPages">No. of Pages</label>
 <input type="number" name="numberOfPages" id="numberOfPages">
-<label for "readStatus" >Read status</label>
+<label for= "readStatus" >Read status</label>
 <select type="text" name="readStatus" id="readStatus">
     <option value="Read">Read</option>
     <option value="Unread">Unread</option>
 </select>
-<button type="submit" class="addToLibraryButton">Add to Library</button>
+<!-- </div> -->
+<button type="submit" class="add-to-library-button">Add to Library</button>
+<button class="clear-all-fields-button">Clear all fields</button>
 </form>
+    <div class="main-container">
+       <div class="p-container"> <h1>My Library</h1></div>
+    <!-- <div class="button-and-form-container"> -->
+    <button id = "new-book-button" class="new-book-button">Add new book to library</button>
+
+
+
+
+
 <!-- </div> -->
 <div class="library-container">
   
   
 
 </div>
+
+</div>
 </div>
 
 
-    </form>
+    
 
 
 
