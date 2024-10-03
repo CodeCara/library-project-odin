@@ -1,7 +1,6 @@
 const myLibrary = [];
 const newBookButton = document.querySelector('.new-book-button');
 const form = document.querySelector('form');
-//classnames not presented correctly!
 const addToLibraryButton = document.querySelector('.add-to-library-button');
 const libraryContainer = document.querySelector('.library-container');
 const clearAllFieldsButton = document.querySelector('.clear-all-fields-button');
@@ -25,22 +24,11 @@ let readStatus =  document.getElementById('readStatus').value;
 
 const newBook = new Book (author, title, numberOfPages, readStatus);
     myLibrary.push(newBook);
-    // form.style.display='none';
-//    if (cardDiv1){ remove.cardDiv1();}
-    // remove.cardDiv2();
-    // remove.cardDiv3();
-    // remove.cardDiv4();
-    // remove.deleteButton();
-    // remove.changeReadStatus();
-
     displayBooks();
 
   
  }
 
-
-
-//Constructor function WORKS
 function Book (author, title, numberOfPages, readStatus) {
 this.author = author;
 this.title = title;
@@ -48,7 +36,6 @@ this.numberOfPages = numberOfPages;
 this.readStatus = readStatus;
 
  }
-
 
 
 addToLibraryButton.addEventListener('click', preventSubmit);
@@ -59,9 +46,6 @@ addToLibraryButton.addEventListener('click', addToLibrary);
 
 
     
-   
-// { myLibrary.splice(1, i)}
-
 function displayBooks (newBook) {
 
     libraryContainer.innerHTML=" ";
@@ -76,11 +60,6 @@ function displayBooks (newBook) {
             colLabel3.style.fontWeight='bold';
             emptyDiv1.style.fontWeight='bold';
             emptyDiv2.style.fontWeight='bold';
-
-
-
-
-
 
             colLabel1.innerText='Author';
             colLabel2.innerText='Title';
@@ -99,13 +78,8 @@ function displayBooks (newBook) {
 
     for (let i=0; i<myLibrary.length; i++)
    
-        // {let bookDisplay =  myLibrary[i];
           { 
         
-
-
-
-
             let cardDiv1 = document.createElement('div');
             let cardDiv2 = document.createElement('div');
             let cardDiv3 = document.createElement('div');
@@ -126,23 +100,18 @@ function displayBooks (newBook) {
             cardDiv1.style.alignSelf='center';
             cardDiv2.style.alignSelf='center';  
             cardDiv3.style.alignSelf='center';
-
-
-
-
-            cardDiv3.style.justifySelf='center';
+             cardDiv3.style.justifySelf='center';
         
-
-          
-            
           
             changeReadStatus.innerText=myLibrary[i].readStatus;
             changeReadStatus.style.backgroundColor='green';
+            changeReadStatus.style.fontWeight='bold'
+            changeReadStatus.style.color='#e3e3e3';
             deleteButton.innerText="Delete";
+            deleteButton.style.fontWeight='bold';
             document.querySelector('.library-container').appendChild(cardDiv1);
             document.querySelector('.library-container').appendChild(cardDiv2);
             document.querySelector('.library-container').appendChild(cardDiv3);
-            // document.querySelector('.library-container').appendChild(cardDiv4);
             document.querySelector('.library-container').appendChild(changeReadStatus);
             document.querySelector('.library-container').appendChild(deleteButton);
            
@@ -160,29 +129,20 @@ function deleteLibraryItem ()
   {
     console.log(myLibrary[i].readStatus);
     
-    if (
-      changeReadStatus.innerText==='Read')
+    if (changeReadStatus.innerText==='Read')
 
-      
-      
-      
+   
 {changeReadStatus.innerText='Unread'
 changeReadStatus.style.backgroundColor='red';
   myLibrary[i].readStatus = 'Unread'
   console.log(myLibrary[i]);
 }
 
-   
-        
-          
-        
 
    else {changeReadStatus.innerText='Read'
    changeReadStatus.style.backgroundColor='green';
-
     myLibrary[i].readStatus='Read';
     console.log(myLibrary[i]);
-
    }
 
    }
@@ -190,28 +150,17 @@ changeReadStatus.style.backgroundColor='red';
 
   
 
-
- 
-
-
   }      
 
  
 
-
-clearAllFieldsButton.addEventListener('click', preventSubmit);
-// function preventSubmit (event)
-// {event.preventDefault();}
-     
+clearAllFieldsButton.addEventListener('click', preventSubmit);    
 clearAllFieldsButton.addEventListener('click', function () {
   author.value =' '
   title.value = ' '
   numberOfPages.value = ' '
 });  
 
-
-
 } 
 
   
-            // deleteButton.addEventListener('click', myLibrary.splice(1, [i]));
