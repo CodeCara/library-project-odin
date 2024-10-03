@@ -19,7 +19,7 @@ form {
 margin-top: 2rem;
 display: none;
 background-color: var(--lib-main-color);
-box-shadow: 3px 3px 2px;
+box-shadow: 2px 2px 2px;
 /* 
 width: 15rem; */
 /* border: 10px solid var(--text-color); */
@@ -36,11 +36,13 @@ input, select {margin-bottom: 1.5rem;}
 .library-container
 /* //change back to grid */
 {display: grid;
+    justify-content: center;
  margin-left: 4rem;  
  margin-right: 4rem;
 grid-template-columns: repeat(5, 1fr) ;
 gap: 2rem;
 margin-top: 3rem;
+justify-content: center;
 
 
 /* background-color: red; */
@@ -87,7 +89,7 @@ color: var(--lib-main-color)}
 
 .add-to-library-button,
 .clear-all-fields-button
-{width: 10rem;
+{width: 11rem;
     background-color: var(--body-color);
     color: var(--text-color);
   
@@ -95,7 +97,7 @@ color: var(--lib-main-color)}
 
 .add-to-library-button
 
-{margin-bottom: 5px;}
+{margin-bottom: 1rem;}
 
 .new-book-button
 
