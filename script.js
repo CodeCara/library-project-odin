@@ -103,8 +103,16 @@ function displayBooks (newBook) {
              cardDiv3.style.justifySelf='center';
         
           
-            changeReadStatus.innerText=myLibrary[i].readStatus;
-            changeReadStatus.style.backgroundColor='green';
+            
+           changeReadStatus.innerText=myLibrary[i].readStatus;
+
+           //new code added 4 oct 24
+            if (changeReadStatus.innerText==='Read')
+              {changeReadStatus.style.backgroundColor='green'}
+            else (changeReadStatus.style.backgroundColor='red')
+
+
+
             changeReadStatus.style.fontWeight='bold'
             changeReadStatus.style.color='#e3e3e3';
             deleteButton.innerText="Delete";
@@ -158,7 +166,7 @@ clearAllFieldsButton.addEventListener('click', preventSubmit);
 clearAllFieldsButton.addEventListener('click', function () {
   author.value =' '
   title.value = ' '
-  numberOfPages.value = ' '
+  numberOfPages.value = ' ';
 });  
 
 } 
