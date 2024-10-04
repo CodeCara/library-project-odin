@@ -166,7 +166,7 @@ clearAllFieldsButton.addEventListener('click', preventSubmit);
 clearAllFieldsButton.addEventListener('click', function () {
   author.value =' '
   title.value = ' '
-  numberOfPages.value = ' ';
+  numberOfPages.value = '';
 });  
 
 } 
