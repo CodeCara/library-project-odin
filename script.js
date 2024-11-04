@@ -8,6 +8,7 @@ const clearAllFieldsButton = document.querySelector('.clear-all-fields-button');
 
 
 function revealForm () {
+  
     form.style.display = 'flex';
   form.style.flexDirection= 'column';}
 
@@ -22,20 +23,26 @@ let numberOfPages = document.getElementById('numberOfPages').value;
 let readStatus =  document.getElementById('readStatus').value;
 
 
-const newBook = new Book (author, title, numberOfPages, readStatus);
+let newBook = new Book (author, title, numberOfPages, readStatus);
     myLibrary.push(newBook);
     displayBooks();
 
   
  }
 
-function Book (author, title, numberOfPages, readStatus) {
+class Book {
+constructor(author, title, numberOfPages, readStatus)
+{
 this.author = author;
 this.title = title;
 this.numberOfPages = numberOfPages;
 this.readStatus = readStatus;
+}
 
- }
+
+}
+
+
 
 
 addToLibraryButton.addEventListener('click', preventSubmit);
